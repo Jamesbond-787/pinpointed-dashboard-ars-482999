@@ -5,20 +5,6 @@ Array.from(document.getElementsByClassName('circle')).forEach(element => {
 });
 
 
-
-//movies
-document.getElementById('agentsmovies').addEventListener('mouseenter', function() {
-    document.getElementById('hoversound').currentTime = 0
-    document.getElementById('hoversound').play()
-    document.getElementById('img_movies').classList.remove('hidden')
-    document.getElementById('text_movies').classList.add('hidden')
-})
-
-document.getElementById('agentsmovies').addEventListener('mouseleave', function() {
-    document.getElementById('img_movies').classList.add('hidden')
-    document.getElementById('text_movies').classList.remove('hidden')
-})
-
 //gams
 document.getElementById('agentsgams').addEventListener('mouseenter', function() {
     document.getElementById('hoversound').currentTime = 0
@@ -43,4 +29,30 @@ document.getElementById('agentsyaproom').addEventListener('mouseenter', function
 document.getElementById('agentsyaproom').addEventListener('mouseleave', function() {
     document.getElementById('img_yaproom').classList.add('hidden')
     document.getElementById('text_yaproom').classList.remove('hidden')
+})
+
+//nowgg
+document.getElementById('agentsunblckr').addEventListener('mouseenter', function() {
+    document.getElementById('hoversound').currentTime = 0
+    document.getElementById('hoversound').play()
+    document.getElementById('img_unblckr').classList.remove('hidden')
+    document.getElementById('text_unblckr').classList.add('hidden')
+})
+
+document.getElementById('agentsunblckr').addEventListener('mouseleave', function() {
+    document.getElementById('img_unblckr').classList.add('hidden')
+    document.getElementById('text_unblckr').classList.remove('hidden')
+})
+
+//unblckr
+document.getElementById('agentsnowgg').addEventListener('mouseenter', function() {
+    document.getElementById('hoversound').currentTime = 0
+    document.getElementById('hoversound').play()
+    document.getElementById('img_nowgg').classList.remove('hidden')
+    document.getElementById('text_nowgg').classList.add('hidden')
+})
+
+document.getElementById('agentsnowgg').addEventListener('mouseleave', function() {
+    document.getElementById('img_nowgg').classList.add('hidden')
+    document.getElementById('text_nowgg').classList.remove('hidden')
 })
