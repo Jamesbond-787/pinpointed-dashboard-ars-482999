@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,35 +10,55 @@
 </head>
 
 <body>
-    <audio id="clicksound"><source src="./click.mp3" type="audio/mp3"></audio>
-    <audio id="hoversound"><source src="./hover.mp3" type="audio/mp3"></audio>
+    <audio id="clicksound">
+        <source src="./click.mp3" type="audio/mp3">
+    </audio>
+    <audio id="hoversound">
+        <source src="./hover.mp3" type="audio/mp3">
+    </audio>
     <div class="container">
-        <div class="box">
-            <span class="text" id="title">agents gams hub</span>
-            <div class="line left-line"></div>
-            <div class="line left-center-line"></div>
-            <div class="line right-center-line"></div>
-            <div class="line right-line"></div>
-        </div>
         <div class="circles-container">
-            <a href="https://agentsgams.github.io/agentsgams" target="_blank"><div class="circle" id="agentsgams">
-                <img src="./agentsgams.png" class="hidden" width="75" id="img_gams" draggable="false">
-                <span class="text" id="text_gams">agents gams</span>
-            </div></a>
-            <a href="https://agentsgams.github.io/agents-nowgg" target="_blank"><div class="circle" id="agentsnowgg">
-                <img src="./agentsnowgg.png" class="hidden" width="75" id="img_nowgg" draggable="false">
-                <span class="text" id="text_nowgg">agents now.gg</span>
-            </div></a>
-            <a href="https://agentsyaproom.glitch.me" target="_blank"><div class="circle" id="agentsyaproom">
-                <img src="./agentsyaproom.png" class="hidden" width="75" id="img_yaproom" draggable="false">
-                <span class="text" id="text_yaproom">agents yaproom</span>
-            </div></a>
-            <a href="https://agentsunblckr-agentstuff.vercel.app/" target="_blank"><div class="circle" id="agentsunblckr">
-                <img src="./agentsunblckr.png" class="hidden" width="75" id="img_unblckr" draggable="false">
-                <span class="text" id="text_unblckr">agents unblckr</span>
-            </div></a>
+            <a href="https://agentsgams.github.io/agentsgams" target="_blank">
+                <div class="circle agentsgams" style="opacity:0;" id="agentsgams">
+                    <img src="./agentsgams.png" class="hidden" width="75" id="img_gams" draggable="false">
+                    <span class="text" id="text_gams">agents gams</span>
+                </div>
+            </a>
+            <a onclick="changelog()">
+                <div class="circleIntro" id="intro">
+                    <span class="text introText">agents hub</span>
+                </div>
+            </a>
+            <a href="https://agentsgams.github.io/emulatorjs" target="_blank">
+                <div class="circle agentsemulator" style="opacity:0;" id="agentsemulator">
+                    <img src="./agentsnowgg.png" class="hidden" width="75" id="img_emulator" draggable="false">
+                    <span class="text" id="text_emulator"><span style="color: yellow;">*NEW!*</span><br>agents
+                        emulator</span>
+                </div>
+            </a>
+            <a href="https://agentsyaproom.glitch.me" target="_blank">
+                <div class="circle agentsyaproom" style="opacity:0;" id="agentsyaproom">
+                    <img src="./agentsyaproom.png" class="hidden" width="75" id="img_yaproom" draggable="false">
+                    <span class="text" id="text_yaproom">agents yaproom</span>
+                </div>
+            </a>
+            <a href="https://agentsunblckr-agentstuff.vercel.app/" target="_blank">
+                <div class="circle agentsunblckr" style="opacity:0;" id="agentsunblckr">
+                    <img src="./agentsunblckr.png" class="hidden" width="75" id="img_unblckr" draggable="false">
+                    <span class="text" id="text_unblckr">agents unblckr</span>
+                </div>
+            </a>
         </div>
     </div>
+    <dialog id="changelog" style="width: 500px; height: 300px;">
+        <center>
+            <h1>agents changelog</h1>
+            <iframe src="https://agentsgams.github.io/agentsgams/changelog" style="width: 500px; height: 180px;">
+            </iframe>
+            <br>
+            <button onclick="document.getElementById('changelog').close()">Close Changelog</button>
+        </center>
+    </dialog>
     <script src="./script.js"></script>
 </body>
 

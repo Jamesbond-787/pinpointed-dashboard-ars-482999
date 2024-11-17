@@ -4,8 +4,36 @@ html {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: rgb(14, 14, 14);
     color: white;
+    transition: 0.5s;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg)scale(1.5);
+    }
+    to {
+        transform:rotate(360deg)scale(1.5);
+    }
+}
+
+.agentsgams {
+    left: 40px;
+    bottom: 200px;
+}
+
+.agentsunblckr {
+    left: 40px;
+    top: 200px;
+}
+
+.agentsemulator {
+    left: 250px;
+}
+
+.agentsyaproom {
+    right: 320px;
 }
 
 .container {
@@ -37,7 +65,28 @@ html {
     position: relative;
 }
 
+.spin {
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: scale(1.5);
+}
+
 .circle {
+    position :absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.circleIntro {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -53,53 +102,15 @@ html {
     transform: scale(2);
 }
 
-/* Lines */
-.line {
-    position: absolute;
-    background-color: white;
-    width: 2px;
-}
-
-/* Center line */
-.left-center-line {
-    top: 100px;
-    left: 90px;
-    height: 115px;
-    transform: rotate(7deg);
-    transform-origin: top;
-}
-
-/* Left line */
-.left-line {
-    top: 100px;
-    left: 35px;
-    height: 150px;
-    transform: rotate(50deg);
-    transform-origin: top;
-}
-
-.right-center-line {
-    top: 100px;
-    right: 90px;
-    height: 115px;
-    transform: rotate(-8deg);
-    transform-origin: top;
-}
-
-/* Right line */
-.right-line {
-    top: 100px;
-    right: 18px;
-    height: 120px;
-    transform: rotate(-45deg);
-    transform-origin: top;
-}
-
 .text {
     text-align: center;
     font-family: Arial, sans-serif;
     color: white;
     text-decoration:underline;
+}
+
+.introText {
+    text-decoration: none;
 }
 
 #title {
@@ -108,5 +119,5 @@ html {
 }
 
 .hidden {
-    display: none;
+    display:none;
 }
